@@ -45,4 +45,26 @@ Preferred in most modern setups.
 
 
 
+### 4. Authentication and Security
+
+Classic FTP transmits everything in plaintext (including username and password) — insecure by modern standards.
+
+To fix this, we have:
+
+FTPS (FTP Secure) → FTP over TLS/SSL
+
+SFTP (SSH File Transfer Protocol) → entirely different protocol built on SSH, not FTP, but serves a similar purpose securely.
+
+### 5. Common FTP Commands
+Command	| Description
+USER |	Send username
+PASS	Send password
+LIST	List directory contents
+CWD	Change working directory
+PWD	Print working directory
+RETR	Retrieve (download) a file
+STOR	Store (upload) a file
+DELE	Delete a file
+QUIT	Terminate session
+
 
