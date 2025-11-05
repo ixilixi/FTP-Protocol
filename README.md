@@ -1,7 +1,7 @@
 # FTP-Protocol
 *Basics of FTP
 
-## 🔴1. Definition
+## ✦1. Definition
 
 FTP (File Transfer Protocol) is one of the oldest and most widely used network protocols for transferring files between computers over a TCP/IP network, such as the Internet.
 
@@ -11,7 +11,7 @@ FTP client → initiates the connection and requests file operations.
 
 FTP server → listens for requests, authenticates users, and handles file storage/retrieval.
 
-## 🔴2. Basic Operation
+## ✦2. Basic Operation
 
 FTP uses two separate channels between client and server:
  
@@ -20,7 +20,7 @@ FTP uses two separate channels between client and server:
 | Command Channel  |               21                            | Used for sending commands (like USER, PASS, LIST, RETR, etc.)   |
 | Data Channel     | 20 (active mode) / random (passive mode)    | Used for actual file transfer or directory listing              |
 
-## 🔴3. Connection Modes
+## ✦3. Connection Modes
 
 There are two main modes:
 
@@ -45,7 +45,7 @@ Preferred in most modern setups.
 
 
 
-### 4. Authentication and Security
+### ✦4. Authentication and Security
 
 Classic FTP transmits everything in plaintext (including username and password) — insecure by modern standards.
 
@@ -55,16 +55,20 @@ FTPS (FTP Secure) → FTP over TLS/SSL
 
 SFTP (SSH File Transfer Protocol) → entirely different protocol built on SSH, not FTP, but serves a similar purpose securely.
 
-### 5. Common FTP Commands
-Command	| Description
-USER |	Send username
-PASS	Send password
-LIST	List directory contents
-CWD	Change working directory
-PWD	Print working directory
-RETR	Retrieve (download) a file
-STOR	Store (upload) a file
-DELE	Delete a file
-QUIT	Terminate session
+### ✦5. Common FTP Commands
+
+| Command     | Description               |
+| ----------- | -----------               |
+| USER        | Send username             |
+| PASS        | Send password             |
+| LIST        | 	List directory contents  |
+| CWD         | Change working directory  |
+| PWD         | Print working directory   |
+| RETR        | Retrieve (download) a file|
+| STOR	       | Store (upload) a file     |
+| DELE        | Delete a file             |
+| QUIT        | Terminate session         |
+
+
 
 
