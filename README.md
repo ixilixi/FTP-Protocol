@@ -15,8 +15,8 @@ FTP server → listens for requests, authenticates users, and handles file stora
 
 FTP uses two separate channels between client and server:
  
-| Channel Type     |                                   TCP Port  |                                                     Purpose     |
-| :---             |                               :----:        |                                                            ---: |
+| Channel Type     |                                   TCP Port  |                              Purpose                            |
+| :---             |                               :----:        |                                ---:                             |
 | Command Channel  |               21                            | Used for sending commands (like USER, PASS, LIST, RETR, etc.)   |
 | Data Channel     | 20 (active mode) / random (passive mode)    | Used for actual file transfer or directory listing              |
 
@@ -39,3 +39,10 @@ The server opens a random port and tells the client which one.
 The client initiates both connections (command + data), making it more firewall-friendly.
 
 Preferred in most modern setups.
+
+![active_ftp_connection](https://github.com/user-attachments/assets/dab0a7ae-0d5a-4b65-bb03-a51353855bcc)
+
+
+
+
+
