@@ -79,9 +79,9 @@ SFTP (SSH File Transfer Protocol) → entirely different protocol built on SSH, 
 - Automated backups (using cron + FTP script)
 
 
-### ✦6. Attack Sample
+### ✦7. Attack Sample
 
-- ##### ftp.exe
+ ##### ftp.exe
    ftp.exe is the command-line FTP (File Transfer Protocol) client that comes built into Windows. It allows you to connect to remote FTP servers and transfer files    (upload/download) using simple text-based commands.
    A binary designed for connecting to FTP servers
 
@@ -98,7 +98,7 @@ Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Window
 
 Attack type: Command and Control , Exfil
   
-###### Scenario 2 : Execute
+- ###### Scenario 2 : Execute
 Executes the commands you put inside the text file.
 
 ```cmd
